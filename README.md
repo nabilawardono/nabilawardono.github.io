@@ -18,14 +18,14 @@ I am Nabila Wardono, a passionate BI practitioner focused on transforming data i
 - Statistical Analysis
 
 ## 📈 Featured Projects
-### [Sales Analysis Dashboard](#)
-A dashboard that visualizes sales performance, trends, and product analysis.
+### [Regional Achievement Dashboard](#)
+A dashboard that visualizes sales performance, trends, and forecasting vs target.
 
-### [Customer Churn Prediction](#)
-A machine learning project predicting customer churn using Python.
+### [Signal & Behavior-based Monetization](#)
+A dashboard to guide agent intervention by predicting customer churn and intent to buy using signal and behavior-based propensity scoring.
 
-### [Finance KPI Tracker](#)
-Interactive Power BI dashboard tracking key financial metrics.
+### [Multi-Platform Data Reconciliation Dashboard](#)
+A dashboard to equip sales support team with data reconciliation between Salesforce, AWS Redshift and Chargebee using complex matching model.
 
 ## 📫 Contact
 - [LinkedIn](https://www.linkedin.com/in/nabilawardono/)
