@@ -173,11 +173,11 @@
 
   /* CARDS */
   .projects-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
+    display: grid; grid-template-columns: 1fr; gap: 24px; width: 100%;
   }
   .project-card {
     border: 1.5px solid var(--border); border-radius: 8px;
-    overflow: hidden; cursor: pointer; background: white;
+    overflow: visible; cursor: pointer; background: white;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
   }
   .project-card:hover {
@@ -256,6 +256,9 @@
   }
 
   .flip-container { margin: 16px 26px 0; height: 150px; perspective: 900px; }
+  @media (max-width: 480px) {
+    .flip-container { height: 200px; }
+  }
   .flip-inner {
     position: relative; width: 100%; height: 100%;
     transform-style: preserve-3d;
@@ -623,6 +626,8 @@
       </div>
       <div class="card-cta">Read case study →</div>
     </div>
+
+    <div class="project-card" onclick="openModal('m4')">
       <div class="card-header">
         <div class="card-meta">
           <span class="card-company">Consulting · 2026</span>
