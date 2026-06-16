@@ -173,12 +173,18 @@
 
   /* CARDS */
   .projects-grid {
-    display: grid; grid-template-columns: 1fr; gap: 24px; width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 720px;
+    margin: 0 auto;
+    width: 100%;
   }
   .project-card {
     border: 1.5px solid var(--border); border-radius: 8px;
-    overflow: visible; cursor: pointer; background: white;
+    overflow: hidden; cursor: pointer; background: white;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    width: 100%;
   }
   .project-card:hover {
     border-color: var(--accent);
