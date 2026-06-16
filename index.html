@@ -174,13 +174,14 @@
   /* CARDS */
   .projects-grid {
     display: grid; grid-template-columns: 1fr; gap: 24px;
-    max-width: 760px;
+    max-width: 860px;
   }
   .project-card {
     border: 1.5px solid var(--border); border-radius: 8px;
     overflow: visible; cursor: pointer; background: white;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
     display: flex; flex-direction: column;
+    height: 100%;
   }
   .project-card:hover {
     border-color: var(--accent);
