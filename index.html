@@ -173,12 +173,14 @@
 
   /* CARDS */
   .projects-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
+    display: grid; grid-template-columns: 1fr; gap: 24px;
+    max-width: 760px;
   }
   .project-card {
     border: 1.5px solid var(--border); border-radius: 8px;
-    overflow: hidden; cursor: pointer; background: white;
+    overflow: visible; cursor: pointer; background: white;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    display: flex; flex-direction: column;
   }
   .project-card:hover {
     border-color: var(--accent);
@@ -255,31 +257,29 @@
     border-top: 1px solid var(--border);
   }
 
-  .flip-container { margin: 16px 26px 0; height: 150px; perspective: 900px; }
-
-  @media (max-width: 480px) {
-    .flip-container { height: 200px; }
-    .card-ba-list li { font-size: 0.82rem; }
-    .card-context { font-size: 0.76rem; }
-    .card-subtitle { font-size: 0.74rem; }
-    .metric-val { font-size: 1rem; }
-    .metric-label { font-size: 0.6rem; }
+  .flip-container { 
+    margin: 16px 26px 0;
+    position: relative;
   }
   .flip-inner {
-    position: relative; width: 100%; height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    position: relative; width: 100%;
   }
-  .project-card:hover .flip-inner { transform: rotateX(180deg); }
   .flip-face {
-    position: absolute; inset: 0; backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 6px; padding: 12px 15px;
+    border-radius: 6px; padding: 14px 16px;
     display: flex; flex-direction: column; justify-content: flex-start;
-    overflow: hidden;
+    transition: opacity 0.3s ease;
   }
-  .flip-before { background: var(--red-light); border: 1px solid rgba(166,59,42,0.15); }
-  .flip-after { background: var(--accent-light); border: 1px solid rgba(26,92,69,0.2); transform: rotateX(180deg); }
+  .flip-after {
+    display: none;
+  }
+  .project-card:hover .flip-before {
+    display: none;
+  }
+  .project-card:hover .flip-after {
+    display: flex;
+  }
+  .flip-before { background: var(--red-light); border: 1px solid rgba(166,59,42,0.15); display: flex; }
+  .flip-after { background: var(--accent-light); border: 1px solid rgba(26,92,69,0.2); }
   .flip-label {
     font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em;
     text-transform: uppercase; margin-bottom: 7px;
