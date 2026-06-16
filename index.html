@@ -256,6 +256,19 @@
   }
 
   .flip-container { margin: 16px 26px 0; height: 150px; perspective: 900px; }
+
+  @media (max-width: 900px) {
+    .flip-container { height: 180px; }
+  }
+
+  @media (max-width: 600px) {
+    .flip-container { height: 210px; }
+    .card-ba-list li { font-size: 0.82rem; }
+    .card-context { font-size: 0.75rem; }
+    .card-subtitle { font-size: 0.74rem; }
+    .metric-val { font-size: 1rem; }
+    .metric-label { font-size: 0.6rem; }
+  }
   .flip-inner {
     position: relative; width: 100%; height: 100%;
     transform-style: preserve-3d;
@@ -267,6 +280,7 @@
     -webkit-backface-visibility: hidden;
     border-radius: 6px; padding: 12px 15px;
     display: flex; flex-direction: column; justify-content: flex-start;
+    overflow: hidden;
   }
   .flip-before { background: var(--red-light); border: 1px solid rgba(166,59,42,0.15); }
   .flip-after { background: var(--accent-light); border: 1px solid rgba(26,92,69,0.2); transform: rotateX(180deg); }
